@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60b4894-6d1e-4a53-b11a-158f3584c4b1" name="Changes" comment="FIRST BUILD REST ASSURED">
+    <list default="true" id="c60b4894-6d1e-4a53-b11a-158f3584c4b1" name="Changes" comment="SECOND BUILD REST ASSURED&#10;ADDED-GET AND ADD PLACE">
+      <change afterPath="$PROJECT_DIR$/src/test/java/MockingSection6/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MockingSection6/Dashboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MockingSection6/GetCourseMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MockingSection6/MockModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rest/GETResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rest/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rest/PUTBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/rest/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rest/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +53,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Tester">
+  <component name="RunManager" selected="TestNG.Tester.SectionSixMock">
     <configuration name="Tester" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <extension name="coverage">
@@ -59,6 +65,24 @@
       <option name="PACKAGE_NAME" value="com.rest" />
       <option name="MAIN_CLASS_NAME" value="com.rest.Tester" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tester.SectionSixMock" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rest" />
+      <option name="MAIN_CLASS_NAME" value="com.rest.Tester" />
+      <option name="METHOD_NAME" value="SectionSixMock" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -103,6 +127,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Tester.SectionSixMock" />
         <item itemvalue="TestNG.Tester" />
         <item itemvalue="TestNG.Tester.addPlace" />
         <item itemvalue="TestNG.Tester.TestV" />
@@ -125,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697258066166</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SECOND BUILD REST ASSURED&#10;ADDED-GET AND ADD PLACE">
+      <created>1697299538342</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697299538342</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +173,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FIRST BUILD REST ASSURED" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIRST BUILD REST ASSURED" />
+    <MESSAGE value="SECOND BUILD REST ASSURED&#10;ADDED-GET AND ADD PLACE" />
+    <option name="LAST_COMMIT_MESSAGE" value="SECOND BUILD REST ASSURED&#10;ADDED-GET AND ADD PLACE" />
   </component>
 </project>

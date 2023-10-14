@@ -1,11 +1,20 @@
 package com.rest;
 
+import MockingSection6.Course;
+import MockingSection6.MockModel;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.json.JsonMapper;
 import io.restassured.RestAssured;
 import  static org.hamcrest.Matchers.*;
 
 import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -18,6 +27,7 @@ public class Tester
     }
     private JsonPath jp=null;
     private String place_id=null;
+    private PUTBody putBody=null;
   //  @Test(testName = "demo")
     public void TestSanity()
     {
@@ -44,7 +54,7 @@ public class Tester
 
     }
 
-    @Test(testName = "Add Place")
+    @Test(testName = "Add Place",priority = 0)
     public void addPlace()
     {
       String response=  given().queryParam("key","qaclick123").contentType("application/json").
@@ -68,20 +78,104 @@ public class Tester
                 then().assertThat().statusCode(200).and().extract().response().asString();
                  jp=new JsonPath(response);
                 place_id=jp.getString("place_id");
+        System.out.println(response);
 
 
 
     }
 
-    @Test(testName = "get Place")
+
+    @Test(testName = "PUT Place",priority = 1)
+    public void putPlace()
+    {
+        putBody=new PUTBody();
+        putBody.setAddress("lmao");
+        putBody.setPlace_id(this.place_id);
+        putBody.setKey("qaclick123");
+
+        String response=  given().queryParam("key","qaclick123").contentType("application/json").
+                body(putBody).
+                when().put("maps/api/place/update/json").
+                then().assertThat().statusCode(200).and().extract().response().asString();
+        System.out.println(response);
+
+
+    }
+
+
+    @Test(testName = "get Place",priority = 2)
     public void getPlace()
     {
-        String response=  given().queryParam("key","qaclick123").
+        GETResponse response=  given().queryParam("key","qaclick123").
                 queryParam("place_id",place_id).contentType("application/json").
                 when().get("maps/api/place/get/json").
-                then().assertThat().statusCode(200).and().extract().response().asString();
-        jp=new JsonPath(response);
-        System.out.println(jp.getString("location.latitude"));
+                then().assertThat().statusCode(200).and().extract().response().as(GETResponse.class);
+        System.out.println(response.getLocation().getLatitude());
+        //jp=new JsonPath(response);
+       // System.out.println(jp.getString("address"));
+       // Assert.assertEquals(jp.getString("address"),putBody.getAddress());
+
+    }
+    @Test(testName = "sectionsixmock")
+    public void SectionSixMock()
+    {
+        jp=new JsonPath("{\n" +
+                "\n" +
+                "\"dashboard\": {\n" +
+                "\n" +
+                "\"purchaseAmount\": 910,\n" +
+                "\n" +
+                "\"website\": \"rahulshettyacademy.com\"\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\"courses\": [\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\"title\": \"Selenium Python\",\n" +
+                "\n" +
+                "\"price\": 50,\n" +
+                "\n" +
+                "\"copies\": 6\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\"title\": \"Cypress\",\n" +
+                "\n" +
+                "\"price\": 40,\n" +
+                "\n" +
+                "\"copies\": 4\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\"title\": \"RPA\",\n" +
+                "\n" +
+                "\"price\": 45,\n" +
+                "\n" +
+                "\"copies\": 10\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "]\n" +
+                "\n" +
+                "}\n" +
+                "\n");
+
+        List<Course> courses= jp.getList("courses");
+        ObjectMapper mapper=new ObjectMapper();
+        List<Course> c=mapper.convertValue(courses, new TypeReference<List<Course>>() {
+        });
+        c.forEach(x-> System.out.println(x.getTitle()));
+
+
+
+
+
 
 
     }
