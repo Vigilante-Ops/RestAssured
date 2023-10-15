@@ -12,6 +12,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -54,30 +57,15 @@ public class Tester
     }
 
     @Test(testName = "Add Place",priority = 0)
-    public void addPlace()
-    {
+    public void addPlace() throws IOException {
       String response=  given().queryParam("key","qaclick123").contentType("application/json").
-                body("{\n" +
-                        "  \"location\": {\n" +
-                        "    \"lat\": -38.383494,\n" +
-                        "    \"lng\": 33.427362\n" +
-                        "  },\n" +
-                        "  \"accuracy\": 50,\n" +
-                        "  \"name\": \"Frontline house\",\n" +
-                        "  \"phone_number\": \"(+91) 983 893 3937\",\n" +
-                        "  \"address\": \"29, side layout, cohen 09\",\n" +
-                        "  \"types\": [\n" +
-                        "    \"shoe park\",\n" +
-                        "    \"shop\"\n" +
-                        "  ],\n" +
-                        "  \"website\": \"http://google.com\",\n" +
-                        "  \"language\": \"French-IN\"\n" +
-                        "}").
+                body(new String(Files.readAllBytes(Path.of("D:\\000Starting new\\RestAssured\\Data.json")))).
                 when().post("maps/api/place/add/json").
                 then().assertThat().statusCode(200).and().extract().response().asString();
                  jp=new JsonPath(response);
                 place_id=jp.getString("place_id");
         System.out.println(response);
+
 
 
 
