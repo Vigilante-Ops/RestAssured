@@ -1,11 +1,8 @@
 package com.rest;
 
 import MockingSection6.Course;
-import MockingSection6.MockModel;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.json.JsonMapper;
 import io.restassured.RestAssured;
 import  static org.hamcrest.Matchers.*;
 
@@ -13,8 +10,10 @@ import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static io.restassured.RestAssured.given;
 
@@ -166,11 +165,19 @@ public class Tester
                 "}\n" +
                 "\n");
 
-        List<Course> courses= jp.getList("courses");
+        /*List<Course> courses= jp.getList("courses");
         ObjectMapper mapper=new ObjectMapper();
         List<Course> c=mapper.convertValue(courses, new TypeReference<List<Course>>() {
-        });
-        c.forEach(x-> System.out.println(x.getTitle()));
+        });*/
+        int count=jp.getInt("courses.size()");
+        int price=0;
+        int pamount=jp.getInt("dashboard.purchaseAmount");
+        for (int i=0;i<count;i++)
+        {
+            price=price+ (jp.getInt("courses.get("+i+").price")*jp.getInt("courses.get("+i+").copies"));
+        }
+        Assert.assertEquals(pamount,price);
+
 
 
 

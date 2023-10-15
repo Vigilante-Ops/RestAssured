@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60b4894-6d1e-4a53-b11a-158f3584c4b1" name="Changes" comment="SECOND BUILD REST ASSURED&#10;ADDED-GET AND ADD PLACE">
-      <change afterPath="$PROJECT_DIR$/src/test/java/MockingSection6/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MockingSection6/Dashboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MockingSection6/GetCourseMock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MockingSection6/MockModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/rest/GETResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/rest/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/rest/PUTBody.java" afterDir="false" />
+    <list default="true" id="c60b4894-6d1e-4a53-b11a-158f3584c4b1" name="Changes" comment="THIRD BUILD REST ASSURED&#10;Very important scenario in which jackson fails.&#10;ref-&gt;https://stackoverflow.com/questions/28821715/java-lang-classcastexception-java-util-linkedhashmap-cannot-be-cast-to-com-test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/rest/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rest/Tester.java" afterDir="false" />
     </list>
@@ -157,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697299538342</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="THIRD BUILD REST ASSURED&#10;Very important scenario in which jackson fails.&#10;ref-&gt;https://stackoverflow.com/questions/28821715/java-lang-classcastexception-java-util-linkedhashmap-cannot-be-cast-to-com-test">
+      <created>1697305760907</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697305760907</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +174,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FIRST BUILD REST ASSURED" />
     <MESSAGE value="SECOND BUILD REST ASSURED&#10;ADDED-GET AND ADD PLACE" />
-    <option name="LAST_COMMIT_MESSAGE" value="SECOND BUILD REST ASSURED&#10;ADDED-GET AND ADD PLACE" />
+    <MESSAGE value="THIRD BUILD REST ASSURED&#10;Very important scenario in which jackson fails.&#10;ref-&gt;https://stackoverflow.com/questions/28821715/java-lang-classcastexception-java-util-linkedhashmap-cannot-be-cast-to-com-test" />
+    <option name="LAST_COMMIT_MESSAGE" value="THIRD BUILD REST ASSURED&#10;Very important scenario in which jackson fails.&#10;ref-&gt;https://stackoverflow.com/questions/28821715/java-lang-classcastexception-java-util-linkedhashmap-cannot-be-cast-to-com-test" />
   </component>
 </project>
