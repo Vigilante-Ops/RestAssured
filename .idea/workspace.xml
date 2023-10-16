@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60b4894-6d1e-4a53-b11a-158f3584c4b1" name="Changes" comment="FOURTH BUILD REST ASSURED&#10;Using jsonpath and internal fn to fetch array size n access elements">
-      <change afterPath="$PROJECT_DIR$/Data.json" afterDir="false" />
+    <list default="true" id="c60b4894-6d1e-4a53-b11a-158f3584c4b1" name="Changes" comment="USED EXTERNAL JSON&#10;Files.readAllBytes()&#10;Covert this to String">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rest/OAuth2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/rest/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rest/Tester.java" afterDir="false" />
     </list>
@@ -47,7 +47,42 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Tester.addPlace">
+  <component name="RunManager" selected="TestNG.OAuth2">
+    <configuration name="OAuth2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rest" />
+      <option name="MAIN_CLASS_NAME" value="com.rest.OAuth2" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OAuth2.getAccessCode" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rest" />
+      <option name="MAIN_CLASS_NAME" value="com.rest.OAuth2" />
+      <option name="METHOD_NAME" value="getAccessCode" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tester" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <extension name="coverage">
@@ -83,24 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tester.TestV" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rest" />
-      <option name="MAIN_CLASS_NAME" value="com.rest.Tester" />
-      <option name="METHOD_NAME" value="TestV" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tester.addPlace" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <extension name="coverage">
@@ -121,10 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.OAuth2" />
+        <item itemvalue="TestNG.OAuth2.getAccessCode" />
         <item itemvalue="TestNG.Tester.addPlace" />
         <item itemvalue="TestNG.Tester.SectionSixMock" />
         <item itemvalue="TestNG.Tester" />
-        <item itemvalue="TestNG.Tester.TestV" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697353059161</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="USED EXTERNAL JSON&#10;Files.readAllBytes()&#10;Covert this to String">
+      <created>1697381796673</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697381796673</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +209,7 @@
     <MESSAGE value="SECOND BUILD REST ASSURED&#10;ADDED-GET AND ADD PLACE" />
     <MESSAGE value="THIRD BUILD REST ASSURED&#10;Very important scenario in which jackson fails.&#10;ref-&gt;https://stackoverflow.com/questions/28821715/java-lang-classcastexception-java-util-linkedhashmap-cannot-be-cast-to-com-test" />
     <MESSAGE value="FOURTH BUILD REST ASSURED&#10;Using jsonpath and internal fn to fetch array size n access elements" />
-    <option name="LAST_COMMIT_MESSAGE" value="FOURTH BUILD REST ASSURED&#10;Using jsonpath and internal fn to fetch array size n access elements" />
+    <MESSAGE value="USED EXTERNAL JSON&#10;Files.readAllBytes()&#10;Covert this to String" />
+    <option name="LAST_COMMIT_MESSAGE" value="USED EXTERNAL JSON&#10;Files.readAllBytes()&#10;Covert this to String" />
   </component>
 </project>

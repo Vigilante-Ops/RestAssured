@@ -58,7 +58,7 @@ public class Tester
 
     @Test(testName = "Add Place",priority = 0)
     public void addPlace() throws IOException {
-      String response=  given().queryParam("key","qaclick123").contentType("application/json").
+     String response=  given().queryParam("key","qaclick123").contentType("application/json").
                 body(new String(Files.readAllBytes(Path.of("D:\\000Starting new\\RestAssured\\Data.json")))).
                 when().post("maps/api/place/add/json").
                 then().assertThat().statusCode(200).and().extract().response().asString();
